@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-	<Version>1.0.0</Version>
+	<Version>1.1.0</Version>
 	<TargetFramework>netstandard2.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>Fable.ReactLazyLoad</PackageId>
@@ -9,6 +9,7 @@
     <RepositoryUrl>https://github.com/kerams/Fable.ReactLazyLoad</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>fsharp;fable;fable-binding;fable-javascript</PackageTags>
+    <DisableImplicitFSharpCoreReference>true</DisableImplicitFSharpCoreReference>
   </PropertyGroup>
   <PropertyGroup>
     <NpmDependencies>
@@ -21,8 +22,8 @@
   <ItemGroup>
     <Content Include="*.fsproj; *.fs; *.js;" Exclude="**\*.fs.js" PackagePath="fable/" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-	<PackageReference Update="FSharp.Core" Version="4.7.2" />
     <PackageReference Include="Fable.Core" Version="3.2.9" />
     <PackageReference Include="Fable.React.Types" Version="18.0.0" />
   </ItemGroup>

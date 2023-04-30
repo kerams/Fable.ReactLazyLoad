@@ -39,6 +39,16 @@ type LazyLoadOption =
     /// A callback function to execute when the content appears on the screen.
     static member inline onContentVisible (callback: unit -> unit): ILazyLoadOption = !!("onContentVisible", callback)
 
+    /// The class to be used on the wrapping elemement.
+    ///
+    /// Default: ''
+    static member inline className (name: string): ILazyLoadOption = !!("className", name)
+
+    /// The type of the wrapping element.
+    ///
+    /// Default: 'div'
+    static member inline elementType (element: string): ILazyLoadOption = !!("elementType", element)
+
 [<Erase>]
 type LazyLoad =
     static member inline render (options: seq<ILazyLoadOption>) (children: seq<ReactElement>) = React.createElement (importDefault "react-lazy-load", createObj !!options, children)
